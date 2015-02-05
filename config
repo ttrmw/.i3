@@ -189,3 +189,4 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 1 -- 0 && 
 
 # lock screen
 bindsym Mod4+l exec --no-startup-id dm-tool lock
+new_window 1pixel

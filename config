@@ -166,7 +166,7 @@ bar {
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used his favorite modifier (alt or windows)
+# keysym-based config which used 1his favorite modifier (alt or windows)
 #
 # i3-config-wizard will not launch if there already is a config file
 # in ~/.i3/config.
@@ -190,3 +190,4 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 1 -- 0 && 
 # lock screen
 bindsym Mod4+l exec --no-startup-id dm-tool lock
 new_window 1pixel
+gap_size 10

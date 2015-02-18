@@ -164,17 +164,6 @@ bar {
         status_command i3status
 }
 
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used 1his favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
-exec i3-config-wizard
-
 ####
 # key bindings for volume hardware keys
 #  up unmutes if muted
@@ -186,8 +175,15 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -- -20
 # vol up
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 1 -- 0 && pactl set-sink-volume 1 -- +20%
 
+# exec --no-startup-id gnome-keyring-daemon
+# exec --no-startup-id ssh-add
 
 # lock screen
 bindsym Mod4+l exec --no-startup-id dm-tool lock
-new_window 1pixel
+
+# no title bars, no borders
+new_window pixel 0
+
+# useless gaps
 gap_size 10
+

@@ -1,6 +1,6 @@
 # i3 config file (v4)
 #
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Please see http://i3wm.org/docs/userguide.html for a co$mplete reference!
 #
 # This config file uses keycodes (bindsym) and was written for the QWERTY
 # layout.
@@ -184,6 +184,11 @@ bindsym Mod4+l exec --no-startup-id dm-tool lock
 # no title bars, no borders
 new_window pixel 0
 
-# useless gaps
-gap_size 10
+#Airblader useless gaps
+gaps inner 15
+gaps outer 25
 
+### Brightness keybindings
+
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo bright_down
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo bright_up

@@ -60,7 +60,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+c split h 
+bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -141,7 +141,6 @@ mode "resize" {
 }
 
 #Appearance
-exec --no-startup-id feh --bg-scale wallpapers/timothy_j_digital_art_low_poly_mountains_1920x1080_67743.jpg
 
 # class                 border  backgr. text    indicator
 client.focused          #543F8C #7BDBF4 #ffffff #2e9ef4
@@ -157,6 +156,8 @@ exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id ssh-add
 exec --no-startup-id nm-applet
 exec --no-startup-id compton -c
+exec --no-startup-id feh --bg-scale wallpapers/timothy_j_digital_art_low_poly_mountains_1920x1080_67743.jpg
+
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -183,7 +184,7 @@ bar {
 #me from here
 
 #neato keybindings
-bindsym mod4+l exec --no-startup-id exec dm-tool lock
+bindsym mod4+l exec --no-startup-id dm-tool lock
 
 #gaps
 gaps inner 20
@@ -201,7 +202,7 @@ workspace 5 output eDP1
 workspace 7 output eDP1
 workspace 9 output eDP1
 
-workspace 2 output DP4 
+workspace 2 output DP4
 workspace 4 output DP4
 workspace 6 output DP4
 workspace 8 output DP4

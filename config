@@ -31,7 +31,7 @@ bindsym $mod+Shift+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
@@ -143,20 +143,21 @@ mode "resize" {
 #Appearance
 
 # class                 border  backgr. text    indicator
-client.focused          #543F8C #7BDBF4 #ffffff #2e9ef4
-client.focused_inactive #543F8C #543F8C #ffffff #484e50
-client.unfocused        #543F8C #543F8C #888888 #292d2e
-client.urgent           #543F8C #543F8C #ffffff #900000
-client.placeholder      #543F8C #543F8C #ffffff #000000
+client.focused          #BFA684 #899828 #ffffff #2e9ef4
+client.focused_inactive #BFA684 #BFA684 #ffffff #484e50
+client.unfocused        #BFA684 #BFA684 #888888 #292d2e
+client.urgent           #BFA684 #BFA684 #ffffff #900000
+client.placeholder      #BFA684 #BFA684 #ffffff #000000
 
 #startup
 exec_always --no-startup-id setxkbmap us -option "caps:swapescape"
-exec --no-startup-id sh ~/.screenlayout/layout.sh
-exec --no-startup-id gnome-keyring-daemon
-exec --no-startup-id ssh-add
-exec --no-startup-id nm-applet
-exec --no-startup-id compton -c
-exec --no-startup-id feh --bg-scale wallpapers/timothy_j_digital_art_low_poly_mountains_1920x1080_67743.jpg
+exec        --no-startup-id sh ~/.screenlayout/layout.sh
+exec        --no-startup-id gnome-keyring-daemon
+exec        --no-startup-id ssh-add
+exec        --no-startup-id nm-applet
+exec        --no-startup-id compton -c
+exec        --no-startup-id xinput set-prop 15 Device Enabled 0
+exec_always --no-startup-id feh --bg-scale wallpapers/low_poly_landscape___waterfall_river_by_pieter12-d5qjkgu.png
 
 bindsym $mod+r mode "resize"
 
@@ -166,12 +167,12 @@ bar {
         colors {
                 # Whole color settings
                 background #313437
-                statusline #7BDBF4
+                statusline #899828
                 separator #313437
 
 
-                focused_workspace  #7BDBF4 #543F8C #ffffff
-                active_workspace   #333333 #5f676a #ffffff
+                focused_workspace  #899828 #BFA684 #ffffff
+                active_workspace   #333333 #BFA684 #ffffff
                 inactive_workspace #333333 #222222 #888888
                 urgent_workspace   #2f343a #900000 #ffffff
         }
@@ -191,10 +192,10 @@ gaps inner 20
 gaps outer 30
 new_window pixel 5
 
-bindsym Mod1+d exec dmenu_run -w 1000 -h 38 -x 460 -y 300 -nb "#7BDBF4" -nf "#000000" -sb "#9299a0"
+bindsym Mod1+d exec dmenu_run -w 1000 -h 38 -x 460 -y 300 -nb "#899828" -nf "#000000" -sb "#9299a0"
 
 
-## ACCENT COLOUR = #7BDBF4
+## ACCENT COLOUR = #899828
 
 workspace 1 output eDP1
 workspace 3 output eDP1
@@ -206,4 +207,4 @@ workspace 2 output DP4
 workspace 4 output DP4
 workspace 6 output DP4
 workspace 8 output DP4
-workspace 0 output DP4
+

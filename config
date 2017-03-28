@@ -156,7 +156,7 @@ exec        --no-startup-id gnome-keyring-daemon
 exec        --no-startup-id ssh-add
 exec        --no-startup-id nm-applet
 exec        --no-startup-id compton -c
-exec        --no-startup-id xinput set-prop 15 'Device Enabled' 0
+exec        --no-startup-id xinput disable 15
 exec        --no-startup-id powerline-daemon -q
 #i3 restart
 exec_always --no-startup-id feh --bg-fill --no-xinerama ./wallpapers/sU0txub.png
@@ -189,7 +189,7 @@ bar {
 #me from here
 
 #neato keybindings
-bindsym mod4+l exec --no-startup-id dm-tool lock
+bindsym mod4+l exec --no-startup-id gnome-screensaver-command -l && dm-tool lock
 
 #gaps
 gaps inner 10
